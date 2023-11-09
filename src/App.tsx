@@ -64,7 +64,7 @@ export const PrivateRoutes = () => {
         <Route path="home" element={<Home />} />
         <Route path="login" element={<Login />} />
 
-        <Route path="/*" element={<Navigate to="/profile" replace />} />
+        <Route path="/*" element={<Navigate to="/login" replace />} />
       </Routes>
     </>
   );
