@@ -17,6 +17,7 @@ const App = () => {
     <div>
       <ErrorBoundary FallbackComponent={ErrorFallback}>
         {/* Actual components */}
+        <NavBar />
         <BrowserRouter>
           <Routes>
             {isAuthenticated ? (
@@ -26,6 +27,10 @@ const App = () => {
             )}
           </Routes>
         </BrowserRouter>
+        <Footer>
+          Contact us @
+          <a href="mailto:hege@example.com">mpushparaja13@gmail.com</a>
+        </Footer>
       </ErrorBoundary>
     </div>
   );
@@ -33,36 +38,34 @@ const App = () => {
 
 export const PublicRoutes = () => {
   return (
-    <Routes>
-      <Route path="login" element={<Login />} />
-      <Route
-        path="login"
-        element={
-          <Suspense fallback={<>Loading...</>}>
-            <Login />
-          </Suspense>
-        }
-      />
-      <Route path="/*" element={<Navigate to="/login" replace />} />
-    </Routes>
+    <>
+      <Routes>
+        <Route path="login" element={<Login />} />
+        <Route
+          path="login"
+          element={
+            <Suspense fallback={<>Loading...</>}>
+              <Login />
+            </Suspense>
+          }
+        />
+        <Route path="/*" element={<Navigate to="/login" replace />} />
+      </Routes>
+    </>
   );
 };
 
 export const PrivateRoutes = () => {
   return (
     <>
-      <NavBar />
       <Routes>
         <Route path="profile" element={<Profile />} />
         <Route path="about" element={<About />} />
         <Route path="home" element={<Home />} />
+        <Route path="login" element={<Login />} />
 
         <Route path="/*" element={<Navigate to="/profile" replace />} />
       </Routes>
-      <Footer>
-        Contact us @
-        <a href="mailto:hege@example.com">mpushparaja13@gmail.com</a>
-      </Footer>
     </>
   );
 };
@@ -79,7 +82,7 @@ const ErrorFallback = () => {
 export default App;
 
 const Footer = styled.div`
-  background-color: #1817dd;
+  background-color: #008b8b;
   color: #fff;
   height: 30px;
   position: fixed;

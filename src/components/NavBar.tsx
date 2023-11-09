@@ -1,9 +1,9 @@
 export default function NavBar() {
   return (
-    <div className="container-fluid">
-      <nav className="navbar navbar-expand-lg bg-body-tertiary">
+    <div className="nav-container">
+      <nav className="navbar navbar-expand-lg theme-bg">
         <div className="container-fluid">
-          <a className="navbar-brand" href="#">
+          <a className="navbar-brand color-white" href="/login">
             Push
           </a>
           <button
@@ -20,22 +20,29 @@ export default function NavBar() {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="/home">
+                <a
+                  className="nav-link color-white"
+                  aria-current="page"
+                  href="/home"
+                >
                   Home
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/about">
+                <a className="nav-link color-white" href="/about">
                   About
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="profile">
+                <a className="nav-link color-white" href="profile">
                   Profile
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link disabled" aria-disabled="true">
+                <a
+                  className="nav-link color-white disabled"
+                  aria-disabled="true"
+                >
                   Extras
                 </a>
               </li>

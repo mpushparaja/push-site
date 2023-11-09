@@ -1,1 +1,8 @@
 @import "../node_modules/bootstrap/dist/css/bootstrap.css";
+
+.theme-bg {
+  background-color: #008b8b;
+}
+.color-white {
+  color: #fff;
+}
